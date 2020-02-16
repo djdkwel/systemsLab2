@@ -13,10 +13,9 @@ int main(){
         for (j = 0; j < size -2 -i  ; j++){
             if(string[j]  > string[j+1]){
             temp = string[j];
-          // putchar(temp);
             string[j] = string[j+1];
             string[j+1] = temp;
-           // puts(string);
+           
 
             }
         }
