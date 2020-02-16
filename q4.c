@@ -1,4 +1,4 @@
-//620103319
+//Diandra Whittick 620103319
 #include<stdio.h>
 #include<stdlib.h>
 int main(){
