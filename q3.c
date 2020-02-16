@@ -2,24 +2,36 @@
 #include<stdlib.h>
 #include<string.h>
 int main(int argc, char *argv[]){
+    
     char arr[30];
     char word[30];
-    int a[30];
-    int b[30];
-    printf("Please enter string:");
-    scanf("%s",word);
-    printf("Please enter string:");
+    int i =0;
+    int ans;
+    printf("Enter String:");
     scanf("%s",arr);
-    int i,n,sum = 0;
-    for(i; i<sizeof(word);i++){
-        a[i]=(int)word[i];
-        sum=sum+a[i];
+    printf("Enter String:");
+    scanf("%s",word);
+    int l1 = strlen(arr);
+    int l2 = strlen(word);
+    if(l1!=l2){
+        printf("They are not the same");
     }
-    for(i; i<sizeof(arr); i++){
-        b[i]=(int)word[i];
-        sum=sum+b[i];
+    else{
+        while(i<l2){
+            if(arr[i]==word[i]){
+            ans=1;
+            }
+            else{
+                ans=2;
+            }
+            i++;
+        }
     }
-    if(sizeof(a)==sizeof(b)){
+    printf("anser is: %d",ans);
+    if(ans==1){
         printf("They are the same");
     }
-}
+    else{
+        printf("They are not the same");
+    }
+    

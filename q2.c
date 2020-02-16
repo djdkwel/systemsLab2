@@ -1,31 +1,26 @@
+//620103319
 #include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include<string.h> 
 
-
-
-int main(int argc, char *argv[]){
-    char str[30];
-    int num[30];
-    int j =0;
-    int size = strlen(str);
+int main(){
+    char string[30];
+    char temp;
+    int j;
+    int size = strlen(string);
     printf("Please enter string: \n");
-    scanf("%s",str);
-    
-    
-    for(int i; i < 6; i++){
-        num[i]=(int)str[i];
-        if(num[i-1]>num[i])
-        {
-            int b = num[i-1];
-            int a = num[i];
-            num[i-1] = a;
-            num[i] = b;
+    scanf("%s",string);
+    for(int i=0; i < size-1; i++){
+        for (j = 0; j < size -2 -i  ; j++){
+            if(string[j]  > string[j+1]){
+            temp = string[j];
+          // putchar(temp);
+            string[j] = string[j+1];
+            string[j+1] = temp;
+           // puts(string);
+
+            }
         }
     }
-    while(j<size){
-        printf("%c",(char)num[j]);
-        j++;
-    }
-    
+    printf("%s",string);
+  
 }
